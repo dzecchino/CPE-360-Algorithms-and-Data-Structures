@@ -1,0 +1,61 @@
+#include<iostream>
+
+using namespace std;
+
+
+//Signature of a function:
+//1. what does the function return
+//2. what is the name of this function
+//3. Arguments: what does the function need to do what it does
+
+void add( int x, int y) {
+	int result;
+	result = x + y;
+
+	return result;
+}
+
+
+
+
+
+
+int main()
+{
+
+	int result;
+
+	result = add(5,3)
+	
+	cout << "Sum of 5 and 3: " << result << endl;
+
+	result add(add(a,b), add(a,b));
+
+	/*
+	cout << "Hello World" << endl;
+	cout << "Branch new line" << endl;
+	*/
+
+
+	int ageOfUser = 10;
+	cout << "Give me your age" << endl;
+	cin >> ageOfUser;
+
+	//== equality; != not equal; > < >= <=
+
+	if(ageOfUser >= 16) {
+		cout << "Yoou are eligible for a license" << endl;
+		cout << "planning a trip to the DMV?" << endl; 
+	)
+	else if (ageOfUser == 15)  {
+
+		cout << "You are so close, hang in there. Not long before you can drive" << endl;
+
+	} 
+	else {
+
+		cout << "You'll have to wait for" << 16 - ageOfUser << "years" << endl;
+
+	}
+	return 1;
+}

@@ -1,0 +1,69 @@
+//Part 1 getNthTermFibonacci
+
+int sum = 0;
+int num1 = 0;
+int num2 = 1;
+
+int getNthTermFibonnaci(int n) {
+    if (n == 1) {
+        cout << num1 << " ";
+    }
+    else {
+        sum = num1 + num2;
+        cout << num1 << " ";
+        num1 = num2;
+        num2 = sum;
+        getNthTermFibonnaci(n-1);
+        return num2;
+    }
+}
+
+//Part 2 Reversing and deleting every other node
+
+void reverseLinkedList(){
+  Chunk *t, *f;
+  t=f=head;
+  if (length == 0){
+    cout << "There is nothing to reverse. " << endl;
+  }
+  else if(length == 1){
+    return ;
+  }
+  else {
+    while(f->next != NULL){
+      f = f->next;
+    }
+    for(i=length-2; i>=0; i--){
+      t = head;
+      for(j=i; j>0; j--){
+        t = t->next;
+      }
+      t->next->next = t;
+    }
+    t->next = NULL;
+    head = f;
+  }
+}
+
+
+void removeEveryOtherNode(){
+  Chunk *temp, *follow;
+  follow = head;
+  temp = follow->next;
+  if(length == 0 || length == 1){
+    cout << "I cannot remove anything from this list." << endl;
+    return ;
+  }
+  else {
+    for(int i = 0; i<length/2; i++){
+
+        follow->next=temp->next;
+        delete temp;
+        if(follow->next == NULL){
+          return ;
+        }
+        follow = follow->next;
+        temp = follow->next;
+        }
+  }
+}
